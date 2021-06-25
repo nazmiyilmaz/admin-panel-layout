@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+      integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.9.55/css/materialdesignicons.min.css"
+      integrity="sha512-vIgFb4o1CL8iMGoIF7cYiEVFrel13k/BkTGvs0hGfVnlbV6XjAA0M0oEHdWqGdAVRTDID3vIZPOHmKdrMAUChA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="layout.css" />
+  </head>
+
+  <body>
+    <div id="header">
+      <span id="btn-show" class="icon">
+        <i class="mdi mdi-menu mdi-36px"></i>
+      </span>
+
+      <span id="pp">
+        <img src="pp.jpg" alt="" />
+      </span>
+
+      <span id="ntf">
+        <span class="icon-wrapper">
+          <i class="mdi mdi-bell mdi-36px"></i>
+          <span class="badge">5</span>
+        </span>
+      </span>
+    </div>
+    <div id="sidebar">
+      <!--BRAND-->
+      <div class="brand">
+        <figure class="image">
+          <img src="logo-text.png" />
+        </figure>
+      </div>
+
+      <!--MENU-->
+      <div id="menu">
+        <a class="menu-item">
+          <span class="icon menu-icon">
+            <i class="mdi mdi-view-dashboard mdi-36px"></i>
+          </span>
+          <span class="menu-label">Overview</span>
+        </a>
+        <a class="menu-item menu-item-active">
+          <span class="icon menu-icon">
+            <i class="mdi mdi-account-multiple mdi-36px"></i>
+          </span>
+          <span class="menu-label">Users</span>
+        </a>
+        <a class="menu-item">
+          <span class="icon menu-icon">
+            <i class="mdi mdi-book mdi-36px"></i>
+          </span>
+          <span class="menu-label">Courses</span>
+        </a>
+        <a class="menu-item">
+          <span class="icon menu-icon">
+            <i class="mdi mdi-bell mdi-36px"></i>
+          </span>
+          <span class="menu-label">Notifications</span>
+        </a>
+      </div>
+
+      <!--BOTTOM-->
+      <div id="bottom">
+        <a class="menu-item">
+          <span class="icon menu-icon">
+            <i class="mdi mdi-logout mdi-36px"></i>
+          </span>
+          <span class="menu-label">Logout</span>
+        </a>
+      </div>
+    </div>
+    <div id="content">
+      <!--content here...-->
+    </div>
+
+    <script src="./layout.js"></script>
+  </body>
+</html>
