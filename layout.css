@@ -70,8 +70,8 @@ body {
   z-index: 999;
   height: 100%;
   width: 245px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   background-color: #f5f3f3;
   -webkit-box-shadow: 0px 0px 5px -2px #00000079;
   box-shadow: 0px 0px 5px -2px #00000079;
@@ -89,8 +89,8 @@ body {
   height: 60px;
   width: 100%;
   background-color: white;
-  -webkit-box-shadow: 0px 0px 7px -2px #00000079;
-  box-shadow: 0px 0px 7px -2px #00000079;
+  -webkit-box-shadow: 0px 0px 5px -2px #00000079;
+  box-shadow: 0px 0px 5px -2px #00000079;
 }
 
 #pp {
@@ -116,6 +116,23 @@ body {
   border: 1px solid #993838;
 }
 
+#pp #pp-dropdown {
+  display: block;
+  position: absolute;
+  min-width: 100px;
+  border-radius: 0.4rem;
+  top: 60px;
+  right: 20;
+  background: white;
+  -webkit-box-shadow: 0px 0px 4px -2px #00000079;
+  box-shadow: 0px 0px 4px -2px #00000079;
+  z-index: 1000;
+}
+
+#pp .hidden {
+  display: none !important;
+}
+
 #ntf {
   cursor: pointer;
   float: right;
@@ -129,17 +146,17 @@ body {
   border-radius: 100%;
 }
 
-#ntf:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
 #ntf .icon-wrapper {
   position: relative;
   float: left;
   padding-left: 7px;
+}
+
+#ntf .icon-wrapper:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #ntf i {
@@ -162,12 +179,33 @@ body {
   padding: 5px;
 }
 
+#ntf #ntf-dropdown {
+  display: block;
+  position: absolute;
+  min-width: 300px;
+  border-radius: 0.4rem;
+  top: 56px;
+  right: 80px;
+  background: linear-gradient(45deg, white 0%, #fff5f5 100%);
+  -webkit-box-shadow: 0px 0px 4px -2px #00000079;
+  box-shadow: 0px 0px 4px -2px #00000079;
+  z-index: 1000;
+}
+
+#ntf .hidden {
+  display: none !important;
+}
+
 #btn-show {
   display: none;
   cursor: pointer;
   padding: 5px;
   width: 50px;
   height: 50px;
+  color: black;
+}
+
+#btn-show:hover {
   color: #b60a27;
 }
 
@@ -178,21 +216,21 @@ body {
   }
   #sidebar {
     width: 0;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   #btn-show {
     display: inline;
   }
   .btn-hide {
     margin-left: 245px;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   .show {
     width: 245px !important;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
 }
 /*# sourceMappingURL=layout.css.map */

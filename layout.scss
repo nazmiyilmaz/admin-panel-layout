@@ -1,19 +1,15 @@
-$transition-duration: 0.2s;
+// VARIABLES
+$transition-duration: 0.5s;
 $primary: #b60a27;
-
 $header-height: 60px;
 $header-bg: rgb(255, 255, 255);
-
 $sidebar-width: 245px;
 $sidebar-bg: rgb(245, 243, 243);
-
 $menu-item-bg-hover: rgba(255, 255, 255, 0.808);
 $menu-item-color: rgb(94, 86, 91);
 $menu-item-color-hover: $primary;
-
 $menu-item-color-active: rgb(153, 56, 56);
 $menu-item-color-active-bg: rgb(240, 210, 210);
-
 $ntf-icon-color: rgb(255, 241, 241);
 $ntf-icon-bg: linear-gradient(
   0deg,
@@ -22,6 +18,12 @@ $ntf-icon-bg: linear-gradient(
 );
 $ntf-badge-color: rgb(202, 0, 0);
 $ntf-badge-bg: rgb(240, 204, 204);
+$ntf-dd-bg: linear-gradient(
+  45deg,
+  rgb(255, 255, 255) 0%,
+  rgb(255, 245, 245) 100%
+);
+$ntf-dd-min-width: 300px;
 
 body {
   margin: 0;
@@ -112,8 +114,8 @@ body {
   height: $header-height;
   width: 100%;
   background-color: $header-bg;
-  -webkit-box-shadow: 0px 0px 7px -2px #00000079;
-  box-shadow: 0px 0px 7px -2px #00000079;
+  -webkit-box-shadow: 0px 0px 5px -2px #00000079;
+  box-shadow: 0px 0px 5px -2px #00000079;
 }
 
 #pp {
@@ -133,8 +135,25 @@ body {
       border: 1px solid $menu-item-color-active;
     }
   }
+
+  #pp-dropdown {
+    display: block;
+    position: absolute;
+    min-width: 100px;
+    border-radius: 0.4rem;
+    top: $header-height;
+    right: 20;
+    background: $header-bg;
+    -webkit-box-shadow: 0px 0px 4px -2px #00000079;
+    box-shadow: 0px 0px 4px -2px #00000079;
+    z-index: 1000;
+  }
+  .hidden {
+    display: none !important;
+  }
 }
 
+// NOTIFICATIONS
 #ntf {
   cursor: pointer;
   float: right;
@@ -145,16 +164,15 @@ body {
   background: $ntf-icon-bg;
   color: $ntf-icon-color;
   border-radius: 100%;
-  &:hover {
-    transform: scale(0.9);
-    transition: 0.5s;
-  }
   .icon-wrapper {
+    &:hover {
+      transform: scale(0.9);
+      transition: 0.5s;
+    }
     position: relative;
     float: left;
     padding-left: 7px;
   }
-
   i {
     text-align: center;
     vertical-align: middle;
@@ -173,15 +191,34 @@ body {
     position: absolute;
     padding: 5px;
   }
+  #ntf-dropdown {
+    display: block;
+    position: absolute;
+    min-width: $ntf-dd-min-width;
+    border-radius: 0.4rem;
+    top: $header-height - 4;
+    right: $header-height + 20;
+    background: $ntf-dd-bg;
+    -webkit-box-shadow: 0px 0px 4px -2px #00000079;
+    box-shadow: 0px 0px 4px -2px #00000079;
+    z-index: 1000;
+  }
+  .hidden {
+    display: none !important;
+  }
 }
 
+// MENU BUTTON
 #btn-show {
   display: none;
   cursor: pointer;
   padding: 5px;
   width: 50px;
   height: 50px;
-  color: $primary;
+  color: black;
+  &:hover {
+    color: $primary;
+  }
 }
 
 @media (max-width: 1000px) {
